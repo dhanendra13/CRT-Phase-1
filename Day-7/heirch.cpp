@@ -1,18 +1,14 @@
 #include<iostream>
 using namespace std;
 
-//Base Class of Player class
 class Player{
     public:
     string name;
-    int age;
     void setName(string n){
         name = n;
     }
-
+    
 };
-
-//Derived Class and Base Class of IndianCricketer class
 class Cricketer: public Player{
     public:
     int runs;
@@ -24,32 +20,27 @@ class Cricketer: public Player{
         cout<<"Runs: "<<runs<<endl;
     }
 };
-class IndianCricketer: public Cricketer{
+class Footballer: public Player{
     public:
-    string state;
-    void setstate(string s){
-        state=s;
+    int goals;
+    void setGoals(int g){
+        goals = g;
     }
     void show(){
         cout<<"Name: "<<name<<endl;
-        cout<<"Runs: "<<runs<<endl;
-        cout<<"State: "<<state<<endl;
+        cout<<"Goals: "<<goals<<endl;
     }
 };
 
+
 int main(){
-    int r;
-    cout<<"Enter runs: ";
-    cin>>r;
-    string s;
-    cout<<"Enter state: ";
-    cin>>s;
-    IndianCricketer c1;
+    Cricketer c1;
     c1.setName("Virat Kohli");
-    c1.setRuns(r);
-    c1.setstate(s);
+    c1.setRuns(100);
     c1.show();
+    Footballer f1;
+    f1.setName("Cristiano Ronaldo");
+    f1.setGoals(50);
+    f1.show();
     return 0;
-
-
 }

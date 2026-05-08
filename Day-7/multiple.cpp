@@ -13,18 +13,16 @@ class Player{
 };
 
 //Derived Class and Base Class of IndianCricketer class
-class Cricketer: public Player{
+class Cricketer{
     public:
     int runs;
     void setRuns(int r){
         runs = r;
     }
-    void show(){
-        cout<<"Name: "<<name<<endl;
-        cout<<"Runs: "<<runs<<endl;
-    }
+    
+    
 };
-class IndianCricketer: public Cricketer{
+class IndianCricketer: public Cricketer, public Player{
     public:
     string state;
     void setstate(string s){
