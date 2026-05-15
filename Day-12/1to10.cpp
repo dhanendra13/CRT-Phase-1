@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+int count(int n){
+    if (n==0){
+        return 1;
+    }
+    count(n-1);
+    cout<<n<<" ";
+};
+
+int main(){
+    int n;
+    cout<<"Enter a number: ";
+    cin>>n;
+    count(n);
+    return 0;
+    
+
+}

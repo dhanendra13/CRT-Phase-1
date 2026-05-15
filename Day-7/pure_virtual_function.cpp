@@ -15,6 +15,6 @@ class Cricketer: public Player{
 int main(){
 Cricketer c1;
 c1.show();
-return 0;
+return 0;ī
 
 }
